@@ -1,7 +1,7 @@
 import class Foundation.Thread
 import Dispatch
 
-public class Promise<T>: Thenable, CatchMixin {
+open class Promise<T>: Thenable, CatchMixin {
     let box: Box<Result<T>>
 
     fileprivate init(box: SealedBox<Result<T>>) {
